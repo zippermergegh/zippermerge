@@ -1,0 +1,27 @@
+[project]
+name = "zippermerge"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "zippermerge", email = "zippermerge12@gmail.com" }
+]
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.maturin]
+module-name = "zippermerge._core"
+python-packages = ["zippermerge"]
+python-source = "src"
+
+[tool.uv]
+cache-keys = [{ file = "pyproject.toml" }, { file = "src/**/*.rs" }, { file = "Cargo.toml" }, { file = "Cargo.lock" }]
+
+[tool.uv.workspace]
+members = [
+    "packages/differential",
+]
+
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
