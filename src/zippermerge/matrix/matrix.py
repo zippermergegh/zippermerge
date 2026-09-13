@@ -87,13 +87,6 @@ def rref(matrix, tol=1e-10):
 if __name__ == "__main__":
     torch.set_printoptions(precision=4, sci_mode=False)
 
-    # ------------------------------------------------------------------
-    # Test matrix from the assignment (equation 2 in the picture):
-    #
-    #   [ 1  3  0  0   3]
-    #   [ 0  0  1  0   9]
-    #   [ 0  0  0  1  -4]
-    # ------------------------------------------------------------------
     A = torch.tensor([
         [1.0, 3.0, 0.0, 0.0, 3.0],
         [0.0, 0.0, 1.0, 0.0, 9.0],
