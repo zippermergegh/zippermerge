@@ -1,3 +1,3 @@
-import matrix 
+from matrix import rowswap, rowscale, rowreplacement, rref
 
-__all__ = [matrix]
+__all__ = ["rowswap", "rowscale", "rowreplacement", "rref"]
