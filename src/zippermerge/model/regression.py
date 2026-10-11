@@ -43,7 +43,7 @@ class LinearRegression(nn.Module):
         self.w1_history: list[float] = []
         self.loss_history: list[float] = []
 
-        # Data kept after fit() so analysis_plot() can use it
+        # Data kept after fit() so analysis_plot() can use
         self._x_train = None
         self._y_train = None
         self._x_test = None
@@ -75,7 +75,7 @@ class LinearRegression(nn.Module):
             y_pred = self.forward(x_tr)
             loss = self.loss_fn(y_pred, y_tr)
 
-            # Record the parameters used for this loss value
+            # Record the parameters 
             self.w0_history.append(self.w0.item())
             self.w1_history.append(self.w1.item())
             self.loss_history.append(loss.item())
