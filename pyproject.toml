@@ -1,6 +1,6 @@
 [project]
 name = "zippermerge"
-version = "0.3.0"
+version = "0.4.0"
 description = "Add your description here"
 readme = "README.md"
 authors = [
@@ -21,9 +21,16 @@ cache-keys = [{ file = "pyproject.toml" }, { file = "src/**/*.rs" }, { file = "C
 members = [
     "packages/differential",
     "packages/matrix",
-    "packages/distributions"
+    "packages/distributions",
+    "packages/model"
 ]
 
 [build-system]
 requires = ["maturin>=1.0,<2.0"]
 build-backend = "maturin"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.31.0",
+    "jupyter>=1.1.1",
+]
